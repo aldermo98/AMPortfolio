@@ -3166,6 +3166,7 @@ input, select, textarea {
 					#header nav a[href="#menu"]:before {
 						content: '\f0c9';
 						line-height: inherit;
+						font-size: 2em;
 					}
 
 					#header nav a[href="#menu"]:hover {
@@ -3472,6 +3473,11 @@ input, select, textarea {
 			line-height: 2;
 			text-transform: uppercase;
 		}
+
+			#banner p .icon {
+				font-size: 2em;
+				margin-right: 15px;
+			}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3835,7 +3841,7 @@ input, select, textarea {
 					border: solid 2px rgba(255, 255, 255, 0.125);
 					cursor: pointer;
 					display: inline-block;
-					font-size: 7vw;
+					font-size: calc(7vw + 20px);
 					line-height: 1.2em;
 					text-align: center;
 				}
