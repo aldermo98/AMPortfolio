@@ -4184,3 +4184,7 @@ input, select, textarea {
 		}
 
 	}
+
+	.center{
+		text-align: center;
+	}
