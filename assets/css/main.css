@@ -182,7 +182,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #ffffff !important;
+			color: rgb(150, 150, 200) !important;
 		}
 
 		a.special:not(.button) {
@@ -3047,7 +3047,7 @@ input, select, textarea {
 			}
 
 			.features article details summary:hover  {
-				color: rgb(112, 112, 255);
+				color: rgb(150, 150, 200);
 				transition: 0.5s;
 			}
 
@@ -3181,11 +3181,20 @@ input, select, textarea {
 			background-color: transparent;
 		}
 
-			#header.alt h1 {
-				opacity: 0;
-				visibility: hidden;
-			}
+			#header.alt h1, #header nav a:not(#a_menu){
+				display: none;
+			}	
 
+			@media screen and (min-width: 800px) {
+				#header:not(.alt) nav a:not(#a_menu){
+					display: inline;
+					font-weight: 500;
+				}
+				#header:not(.alt) nav #a_menu{
+					display: none;
+				}
+			}
+		
 		@media screen and (max-width: 736px) {
 
 			#header {
@@ -4188,3 +4197,13 @@ input, select, textarea {
 	.center{
 		text-align: center;
 	}
+
+	details summary ~ * {
+		animation: sweep 1s ease-in-out;
+	  }
+
+	  @keyframes sweep {
+		0%    {opacity: 0; transform: translateY(-10px)}
+		100%  {opacity: 1; transform: translateY(0)}
+	  }
+	  
