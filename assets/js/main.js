@@ -119,9 +119,13 @@
 						$menu._hide();
 
 					// Redirect.
-						window.setTimeout(function() {
-							window.location.href = href;
-						}, 350);
+						if($(this).attr('target') == "_blank"){
+							window.open(href);
+						}else{
+							window.setTimeout(function() {
+								window.location.href = href;
+							}, 350);
+						}
 
 				});
 
